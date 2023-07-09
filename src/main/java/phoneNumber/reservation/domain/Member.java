@@ -23,15 +23,4 @@ public class Member {
 
     private BirthDate birthDate;
 
-//    public MemberDto.SignUpResponseDto toResponseDto(){
-//        return MemberDto.SignUpResponseDto
-//                .builder()
-//                .id(this.getId())
-//                .name(this.getName())
-//                .phoneNumber(this.getPhone_number())
-//                .year(this.getBirthDate().getYear())
-//                .month(this.getBirthDate().getMonth())
-//                .day(this.getBirthDate().getDay())
-//                .build();
-//    }
 }

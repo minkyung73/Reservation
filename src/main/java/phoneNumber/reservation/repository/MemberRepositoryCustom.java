@@ -16,4 +16,6 @@ public class MemberRepositoryCustom {
         em.persist(member);
         return member;
     }
+
+
 }
