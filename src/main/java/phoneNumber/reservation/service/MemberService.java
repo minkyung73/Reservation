@@ -41,5 +41,15 @@ public class MemberService {
 //        return signUpResponseDto;
     }
 
+    /**
+     * 전화번호를 통한 특정 회원 조회
+     * */
+    @Transactional
+    public MemberDto.OneMemberResponseDto findMember (MemberDto.OneMemberRequestDto oneMemberRequestDto) {
+        Member memberByPhoneNumber = memberRepository.findMemberByPhone_number(oneMemberRequestDto.getPhoneNumber());
+        log.info(String.valueOf(memberByPhoneNumber));
+        return new MemberDto.OneMemberResponseDto().toResponseDto(memberByPhoneNumber);
+    }
+
 
 }

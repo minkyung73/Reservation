@@ -32,11 +32,11 @@ public class MemberController {
      * 회원 정보 조회 API
      * [DESCRIPTION] phone_number 를 사용해서 회원 정보 조회
      * */
-    @GetMapping("/member")
-    public ResponseEntity<MemberDto.SignUpResponseDto> allMember
-    (@Validated @RequestBody  MemberDto.SignUpRequestDto signUpRequestDto ) {
+    @GetMapping("/member/{phone_number}")
+    public ResponseEntity<MemberDto.OneMemberResponseDto> oneMember
+    (@Validated @RequestBody  MemberDto.OneMemberRequestDto oneMemberRequestDto ) {
 
-        MemberDto.SignUpResponseDto member = memberService.createMember(signUpRequestDto);
+        MemberDto.OneMemberResponseDto member = memberService.findMember(oneMemberRequestDto);
         return new ResponseEntity<>(member, HttpStatus.CREATED);
     }
 

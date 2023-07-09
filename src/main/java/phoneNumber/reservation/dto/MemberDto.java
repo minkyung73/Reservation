@@ -62,7 +62,7 @@ public class MemberDto {
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class oneMemberRequestDto {
+    public static class OneMemberRequestDto {
         private String phoneNumber;
 
         public Member toEntity() {
@@ -80,14 +80,14 @@ public class MemberDto {
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class oneMemberResponseDto {
+    public static class OneMemberResponseDto {
         private Long id;
         private String name;
         private String phoneNumber;
         private BirthDate birthDate;
 
-        public SignUpResponseDto toResponseDto(Member member) {
-            return SignUpResponseDto.builder()
+        public OneMemberResponseDto toResponseDto(Member member) {
+            return OneMemberResponseDto.builder()
                     .id(member.getId())
                     .name(member.getName())
                     .phoneNumber(member.getPhone_number())
